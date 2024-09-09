@@ -1,7 +1,9 @@
 let section = document.getElementById("resultado-pesquisa")
 
+let resultados = ""
+
 for (let dado of dados){
-    section.innerHTML += `
+    resultados += `
         <div class="item-resultado">
             <h2>${dado.nome}</h2>
             <p class="descricao-meta">${dado.descricao}</p>
@@ -11,3 +13,5 @@ for (let dado of dados){
         </div>
     `
 }
+
+section.innerHTML = resultados
